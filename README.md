@@ -1,3 +1,5 @@
+# ShortenerUrl
+
 This is a Shortener Url project created with [Next.js](https://nextjs.org), [Tailwindcss](https://tailwindcss.com) and [Firestore Database](https://firebase.google.com/docs/firestore)
 
 ## Getting Started
@@ -32,16 +34,10 @@ APIS:
   ```
 - http://localhost:3000/api/geturl?hash=hash
 
-  Get method that's accept an hash as query param . Ex:
+  Get method that's accept an hash as query param.
 
-How to use:
+Check out the demo page in [https://shorturl.cbfn.dev](https://shorturl.cbfn.dev) for more details.
 
 
 
-Check out the demo page in [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# shortnerurl
-
-```
-
-```
