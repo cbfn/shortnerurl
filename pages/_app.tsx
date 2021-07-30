@@ -1,7 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import 'tailwindcss/tailwind.css';
+import type { AppProps } from 'next/app';
+
+export function reportWebVitals(metric: { label: string }) {
+  if (metric.label === 'custom') {
+    console.log(metric);
+  }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
-export default MyApp
+export default MyApp;
