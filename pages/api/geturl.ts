@@ -13,10 +13,10 @@ export default async function handler(
     urls = await db.collection('entries').get(),
     urlsData = urls.docs.map((entry) => entry.data());
 
-  const url = urlsData.find((entry) => entry.hash === hash);
+  const data = urlsData.find((entry) => entry.hash === hash);
 
-  if (url) {
-    res.status(200).json({ url });
+  if (data?.url) {
+    res.status(200).json({ url: data.url });
   } else {
     res.status(400).end();
   }

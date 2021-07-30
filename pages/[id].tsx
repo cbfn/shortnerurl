@@ -22,7 +22,7 @@ function RedirectUrl({ id }: Params) {
       }
     }
     redirect();
-  });
+  }, [id, router]);
 
   return <></>;
 }
