@@ -5,7 +5,7 @@ This is a Shortener Url project created with [Next.js](https://nextjs.org) and [
 First, run the development server:
 
 ```bash
-npm run dev
+npm install && npm run dev
 # or
 yarn dev
 ```
@@ -17,7 +17,9 @@ Fill the input field with a valid URL and see the shortener url result bellow th
 I created two api routes:
 
 - http://localhost:3000/api/shorterner
+
   Post method that's accept into the body an url. Ex:
+
   ```javascript
   {
     url: 'https://www.apple.com/iphone-se/';
