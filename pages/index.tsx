@@ -24,19 +24,21 @@ export default function Home() {
   }
 
   return (
-    <div className="container mx-auto px-4 justify-center items-center flex flex-col h-screen">
+    <div className="max-w-3xl mx-auto px-4 justify-center items-center flex flex-col h-screen">
       <Head>
         <title>URL Shortener</title>
         <meta name="description" content="URL Shortener" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="py-4 text-2xl uppercase">URL Shorterner</h1>
+      <h1 className="py-4 text-5xl text-gray-600 mb-4 font-medium">
+        URL Shorterner
+      </h1>
       <form
         onSubmit={handleSubmit}
-        className="w-full flex flex-row justify-between"
+        className="w-full grid grid-cols-1 md:grid-cols-3 gap-y-4 justify-between"
       >
-        <div className="w-full mr-2">
+        <div className="w-full mr-2 col-span-2">
           <input
             id="url"
             type="url"
@@ -45,18 +47,19 @@ export default function Home() {
             onChange={(event) => setURL(event.target.value)}
             className="border rounded-md border-gray-300 px-6 py-2 rounded-full w-full h-11"
           />
-          {shortUrl && (
-            <p className="text-gray-500 mt-2">{`${location}${shortUrl}`}</p>
-          )}
         </div>
 
         <button
           type="submit"
-          className="bg-blue-300 text-white px-6 py-2 rounded-full font-bold uppercase h-11"
+          className="bg-blue-300 text-white px-6 py-2 rounded-full font-bold uppercase h-11 md:ml-2"
         >
           Shorten
         </button>
       </form>
+      {shortUrl && (
+        <p className="text-gray-500 mx-auto table mt-4 text-2xl">{`${location}${shortUrl}`}</p>
+      )}
+      <small className="mt-12">Developed by cbfn.dev</small>
     </div>
   );
 }
