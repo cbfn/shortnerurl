@@ -31,9 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="py-4 text-5xl text-gray-600 mb-4 font-medium">
-        URL Shorterner
-      </h1>
+      <h1 className="py-4 text-5xl text-gray-600 mb-4 font-medium">Shorturl</h1>
       <form
         onSubmit={handleSubmit}
         className="w-full grid grid-cols-1 md:grid-cols-3 gap-y-4 justify-between"
