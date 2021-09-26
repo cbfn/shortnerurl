@@ -21,7 +21,7 @@ if (!admin.apps.length) {
       credential: admin.credential.cert(params),
     });
   } catch (error) {
-    console.log('Firebase admin initialization error', error.stack);
+    console.log('Firebase admin initialization error', error);
   }
 }
 export default admin.firestore();
